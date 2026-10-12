@@ -5,53 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayon hasan portfolio</title>
+    <title>Ayon Hasan — Cybersecurity Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="top-banner">
-        <div class="half-width">
-            <h1>Welcome To</h1>
-            <h1><span class="name-color">Ayon Hasan</span> World!</h1>
-            <h3>Your Frindly neighbourhood hacker :P</h3>
-            <p>I am working in the Cyber Security space for over 5 years now. I do bug bounites and I have helped so
-                many comapnies to make their system secure.</p>
+    <nav id="navbar">
+        <a href="#" class="logo">Ayon<span class="accent">.</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-            <a class="anchor-button" target="_blank" href="https://www.facebook.com/lollipop1337">HIRE ME</a>
-
+    <section id="hero" class="top-banner">
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1><span class="accent">Ayon Hasan</span></h1>
+            <h2 class="tagline">Cybersecurity Researcher &amp; Bug Hunter</h2>
+            <p class="hero-desc">I've been working in the cybersecurity space for over 5 years. I do bug bounties and
+                have helped many companies make their systems secure.</p>
+            <div class="hero-buttons">
+                <a class="btn btn-primary" target="_blank" href="https://www.facebook.com/lollipop1337">Hire Me</a>
+                <a class="btn btn-outline" href="#about">Learn More</a>
+            </div>
         </div>
-
-        <div class="half-width">
-            <img src="img/header-image.png" />
+        <div class="hero-image">
+            <img src="img/header-image.png" alt="Ayon Hasan" />
         </div>
     </section>
 
-    <section class="dream-big">
-        <div class="half-width">
-            <img src="img/dream-big.png" alt="">
+    <section id="about" class="dream-big">
+        <div class="about-image">
+            <img src="img/dream-big.png" alt="Dream Big" />
         </div>
-
-        <div class="half-width">
-
-            <h1>Dream Big</h1>
-            <h2>To become a Great Hacker</h2>
+        <div class="about-content">
+            <h2 class="section-title">Dream Big</h2>
+            <h3 class="section-subtitle">To Become a Great Hacker</h3>
             <p>I have loved computers since my childhood, and computers understand me well. After learning about things
                 in computers, I found there is a thing called hacking, and I got interested in it and started learning
-                how to do that and about it.
-                After all these years, I can call myself a hacker, but still, I don't know many things. I don't think I
+                how to do that and about it.</p>
+            <p>After all these years, I can call myself a hacker, but still, I don't know many things. I don't think I
                 will be able to learn everything in my lifetime, but I am constantly learning and trying to become a
-                better hacker; that kid from childhood is still alive, and I want to become a better hacker and work
-                very hard for that.
-            </p>
-            <br>
-            <a class="anchor-button" target="_blank" href="https://github.com/lollipopl337/cv">Download Resume</a>
-
+                better hacker. That kid from childhood is still alive, and I want to work very hard for that.</p>
+            <a class="btn btn-primary" target="_blank" href="https://github.com/lollipopl337/cv">Download Resume</a>
         </div>
     </section>
+
+    <section id="skills" class="skills-section">
+        <h2 class="section-title center">Skills &amp; Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">&#128270;</div>
+                <h3>Bug Bounty</h3>
+                <p>Finding and reporting security vulnerabilities in web applications and systems.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">&#128274;</div>
+                <h3>Penetration Testing</h3>
+                <p>Simulating real-world attacks to identify weaknesses before malicious actors do.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">&#128187;</div>
+                <h3>Web Security</h3>
+                <p>Securing web applications against OWASP Top 10 and beyond.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">&#128736;</div>
+                <h3>Security Auditing</h3>
+                <p>Comprehensive security assessments to harden systems and infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h2 class="section-title center">Get In Touch</h2>
+            <p class="footer-desc">Interested in working together? Let's connect.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/lollipop1337" target="_blank" aria-label="Facebook">FB</a>
+                <a href="https://github.com/lollipopl337" target="_blank" aria-label="GitHub">GH</a>
+            </div>
+            <p class="copyright">&copy; 2026 Ayon Hasan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            toggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                toggle.classList.remove('active');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 
 </html>
